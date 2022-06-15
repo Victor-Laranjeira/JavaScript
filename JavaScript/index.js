@@ -253,16 +253,180 @@
 
 // 2d arrays
 
-let fruits =     ["apples", "oranges", "bananas"];
-let vegetables = ["carrots", "onions", "potatoes"];
-let meats =      ["eggs", "chicken", "fish"];
+// let fruits =     ["apples", "oranges", "bananas"];
+// let vegetables = ["carrots", "onions", "potatoes"];
+// let meats =      ["eggs", "chicken", "fish"];
 
-let groceryList = [fruits, vegetables, meats];
+// let groceryList = [fruits, vegetables, meats];
 
-groceryList[0][2] = "steak";
+// groceryList[0][2] = "steak";
 
-for(let list of groceryList){
-    for(let food of list){
-        console.log(food);
-    }
-}
+// for(let list of groceryList){
+//     for(let food of list){
+//         console.log(food);
+//     }
+// }
+
+// --------------------------------------------------------------------------------------------------
+
+// spread operator
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let maximum = Math.max(numbers);
+// console.log(maximum);
+
+// --------------------------------------------------------------------------------------------------
+
+// rest parameter = represents an idefinite number of parameter
+
+// let a = 1;
+// let b = 2;
+// let c = 3;
+// let d = 4;
+// let e = 5;
+
+// console.log(sum(a, b, c));
+
+// function sum(...numbers){
+//     let total = 0;
+//     for(let number of numbers){
+//         total += number;
+//     }
+//     return total;
+// }
+
+// ----------------------------------------------------------------------------------------------------
+
+// callback = a functions passed as an argument to another function  9
+
+// sum(2, 3, displayDom);
+
+// function sum(x, y, callBack){
+//     let result = x + y;
+//     callBack(result);
+// }
+
+// function displayConsole(output){
+//     console.log(output);
+// }
+
+// function displayDom(output){
+//     document.getElementById("myLabel").innerHTML = output;
+// }
+
+// --------------------------------------------------------------------------------------------------
+
+// array.forEach() = executes a provided callback function once for each array element
+
+// let students = ["bob", "john", "dom"];
+// students.forEach(capitalize);
+// students.forEach(print);
+
+// function capitalize(element, index, array){
+//     array[index] = element[0].toUpperCase() + element.substring(1);
+// }
+
+// function print(element){
+//     console.log(element);
+// }
+
+// ---------------------------------------------------------------------------------------------------
+
+// array.map() = executes a provided callback function once for each array element and creates a new array
+
+// let numbers = [1, 2, 3, 4, 5];
+// let squares = numbers.map(square);
+// let cubes = numbers.map(cube);
+
+// cubes.forEach(print);
+
+// function square(element){
+//     return Math.pow(element, 2);
+// }
+
+// function cube(element){
+//     return Math.pow(element, 3);
+// }
+
+// function print(element){
+//     console.log(element);
+// }
+
+// ---------------------------------------------------------------------------------------------------
+
+// array.filter() = creates a new array with all elements that pass the test provided by a function
+
+// let ages = [15, 16, 17, 18, 19, 21];
+// let adults = ages.filter(checkAge);
+
+// adults.forEach(print);
+
+// function checkAge(element){
+//     return element >= 18;
+// }
+
+// function print(element){
+//     console.log(element);
+// }
+
+// -------------------------------------------------------------------------------------------------
+
+// array.reduce() = reduces an array to a single value
+
+// let prices = [5, 10, 15, 20, 25, 30];
+// let total = prices.reduce(checkOut);
+
+// console.log(`The total is: $${total}`);
+
+// function checkOut(element){
+//     return total + element;
+// }
+
+// -------------------------------------------------------------------------------------------------
+
+// sort an array of numbers
+
+// let numbers = [10, 20, 50, 70, 100, 90, 5];
+
+// grades = grades.sort(ascendingSort);
+
+// grades.forEach(print);
+
+// function descendingSort(x, y){
+//     return y - x;
+// }
+
+// function ascendingSort(x, y){
+//     return x - y;
+// }
+
+// function print(element){
+//     console.log(element);
+// }
+
+// ---------------------------------------------------------------------------------------------------
+
+// arrow function expression = compact alternative to a traditional function expression
+
+// let grades = [100, 50, 90, 60, 80, 70];
+
+// grades.sort((x, y) => y - x);
+// grades.forEach((element) => console.log(element));
+
+// --------------------------------------------------------------------------------------------------
+
+// map = object that hold key-value pairs of any data type
+
+const STORE = new Map([
+    ["t-shirt", 20],
+    ["jeans", 30],
+    ["socks", 10],
+    ["underwear", 50],
+]);
+
+STORE.get("t-shirt");
+STORE.set("hat", 40);
+STORE.delete("hat");
+console.log(STORE.size);
+
+STORE.forEach((value, key) => console.log(`${key} $${value}`));
