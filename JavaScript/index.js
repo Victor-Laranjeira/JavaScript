@@ -641,18 +641,152 @@
 
 // error / throw
 
-try{
-    let x = window.prompt("Enter a #");
-    x = Number(x);
+// try{
+//     let x = window.prompt("Enter a #");
+//     x = Number(x);
 
-    if(isNaN(x)) throw "That wasn't a number";
-    if(x == "") throw "That was empty";
+//     if(isNaN(x)) throw "That wasn't a number";
+//     if(x == "") throw "That was empty";
 
-    console.log(`${x} is a number`);
-}
-catch(error){
-    console.log(error);
-}
-finally{
-    console.log("This always executes.");
-}
+//     console.log(`${x} is a number`);
+// }
+// catch(error){
+//     console.log(error);
+// }
+// finally{
+//     console.log("This always executes.");
+// }
+
+// ---------------------------------------------------------------------------------------------------
+
+// Clock Program  10
+
+// const myLabel = document.getElementById("myLabel");
+
+// update();
+// setInterval(update, 1000)
+
+// function update(){
+//     let date = new Date();
+//     myLabel.innerHTML = formatTime(date);
+
+//     function formatTime(){
+//         let hours = date.getHours();
+//         let minutes = date.getMinutes();
+//         let seconds = date.getSeconds();
+//         let amOrPm = hours >= 12 ? "pm" : "am";
+
+//         hours = (hours % 12) || 12;
+
+//         hours = formatZeroes(hours);
+//         minutes = formatZeroes(minutes);
+//         seconds = formatZeroes(seconds);
+
+//         return `${hours}:${minutes}:${seconds} ${amOrPm}`
+//     }
+//     function formatZeroes(time){
+//         time = time.toString();
+//         return time.length < 2 ? "0" + time : time;
+//     }
+// }
+
+// --------------------------------------------------------------------------------------------------
+
+// promise = object that encapsulates the result of an asynchronous operation
+//           let asynchronous methods return values like synchronous methods
+
+// const promise = new Promise((resolve, reject) => {
+//     let fileLoaded = true;
+
+//     if(fileLoaded){
+//         resolve("File loaded.");
+//     }else{
+//         reject("File NOT loaded.");
+//     }
+// });
+
+// promise.then(value => console.log(value)).catch(error => console.log(error));
+
+// --------------------------------------------------------------------------------------------------
+
+// async = makes a function return a promise
+
+// async function loadFile(){
+//     let fileLoaded = true;
+
+//     if(fileLoaded){
+//         return "File loaded.";
+//     }else{
+//         throw "File NOT loaded.";
+//     }
+// }
+
+// loadFile().then(value => console.log(value)).catch(error => console.log(error));
+
+// -------------------------------------------------------------------------------------------------
+
+// await = makes an async function wait for a promise
+
+// async function loadFile(){
+//     let fileLoaded = true;
+
+//     if(fileLoaded){
+//         return "File loaded.";
+//     }else{
+//         throw "File NOT loaded.";
+//     }
+// }
+// async function startProcess(){
+//     try{
+//         let message = await loadFile();
+//         console.log(message);
+//     }
+//     catch(error){
+//         console.log(error)
+//     }
+// }
+// startProcess();
+
+// --------------------------------------------------------------------------------------------------
+
+// Modules
+
+// import {PI, getCircumference, getArea} from "./math.utils.js"
+// import * as MathUtil from "./math.utils.js"
+
+// console.log(MathUtil.PI);
+
+// let circumference = MathUtil.getCircumference(10);
+// console.log(circumference);
+
+// let area = MathUtil.getArea(10);
+// console.log(area);
+
+// -------------------------------------------------------------------------------------------------
+
+// Element selectors  11
+
+// let element = document.getElementById("myTitle");
+// element.style.backgroundColor = "lightgreen";
+
+// let fruits = documents.getElementsByName("fruits");
+
+// fruits.forEach(fruit => {
+//     if(fruit.checked){
+//         console.log(fruit.value);
+//     }
+// });
+
+// let vegetables = document.getElementsByTagName("li");
+// vegetables[0].style.backgroundColor = "lightgreen";
+
+// let desserts = document.getElementsByClassName("desserts");
+// desserts[1].style.backgroundColor = "lightgreen";
+
+// let element = document.querySelector("[for]");
+// element.style.backgroundColor = "lightgreen";
+
+// let element = document.querySelectorAll("[for]");
+// element.forEach(element => {
+//     element.style.backgroundColor = "lightgreen";
+// })
