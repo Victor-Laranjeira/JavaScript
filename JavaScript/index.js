@@ -417,16 +417,242 @@
 
 // map = object that hold key-value pairs of any data type
 
-const STORE = new Map([
-    ["t-shirt", 20],
-    ["jeans", 30],
-    ["socks", 10],
-    ["underwear", 50],
-]);
+// const STORE = new Map([
+//     ["t-shirt", 20],
+//     ["jeans", 30],
+//     ["socks", 10],
+//     ["underwear", 50],
+// ]);
 
-STORE.get("t-shirt");
-STORE.set("hat", 40);
-STORE.delete("hat");
-console.log(STORE.size);
+// STORE.get("t-shirt");
+// STORE.set("hat", 40);
+// STORE.delete("hat");
+// console.log(STORE.size);
 
-STORE.forEach((value, key) => console.log(`${key} $${value}`));
+// STORE.forEach((value, key) => console.log(`${key} $${value}`));
+
+// --------------------------------------------------------------------------------------------------
+
+// object
+
+// const car = {
+//     model:"Mustang",
+//     color:"red",
+//     year:2023,
+
+//     drive : function(){
+//         console.log("You drive the car");
+//     },
+
+//     brake : function(){
+//         console.log("You step on the brake")
+//     }
+// }
+
+// console.log(car.model);
+// console.log(car.color);
+// console.log(car.year);
+
+// car.drive();
+// car.brake();
+
+// --------------------------------------------------------------------------------------------------
+
+// class
+
+// class Player{
+//     score = 0;
+
+//     pause(){
+//         console.log("You paused the game.");
+//     }
+//     exit(){
+//         console.log("you exited the game.");
+//     }
+// }
+
+// const player1 = new Player();
+
+// player1.score = 10;
+// console.log(score);
+
+// player1.pause();
+// player1.exit();
+
+// ---------------------------------------------------------------------------------------------------
+
+// Constructors
+
+// class Student{
+
+//     constructor(name, age, gpa){
+//         this.name = name;
+//         this.age = age;
+//         this.gpa = gpa;
+//     }
+//     study(){
+//         console.log(`${this.name} is studying`)
+//     }
+// }
+
+// const student1 = new Student();
+
+// console.log(student1.name);
+// console.log(student1.age);
+// console.log(student1.gpa);
+// student1.study();
+
+// -------------------------------------------------------------------------------------------------
+
+// static = belongs to the class, not the objects properties
+
+// class Car{
+//     static numberOfCars = 0;
+
+//     constructor(model){
+//         this.model = model;
+//         Car.numberOfCars += 1;
+//     }
+
+// }
+
+// const car1 = new Car("Mustang");
+// const car2 = new Car("Corvette");
+// const car3 = new Car("Lambo");
+// const car4 = new Car("Honda");
+// const car5 = new Car("Subaru");
+
+// --------------------------------------------------------------------------------------------------
+
+// inheritance(herança)
+
+// class Animal{
+//     alive = true;
+
+//     eat(){
+//         console.log(`This ${this.name} is eating`);
+//     }
+//     sleep(){
+//         console.log(`This ${this.name} is sleeping`);
+//     }
+// }
+
+// class Rabbit extends Animal{
+//     name = "Rabbit";
+
+//     run(){
+//         console.log(`This ${this.name} is running`);
+//     }
+// }
+// class Fish extends Animal{
+//     name = "Fish";
+
+//     swim(){
+//         console.log(`This ${this.name} is swiming`);
+//     }
+// }
+// class Hawk extends Animal{
+//     name = "Hawk";
+
+//     fly(){
+//         console.log(`This ${this.name} is flying`);
+//     }
+// }
+
+// const rabbit = new Rabbit();
+// const fish = new Fish();
+// const hawk = new Hawk();
+
+// console.log(hawk.alive);
+// hawk.eat();
+// fish.name();
+// rabbit.run();
+
+// --------------------------------------------------------------------------------------------------
+
+//super = Refers to the parent class
+
+// class Animal{
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age;
+//     }
+// }
+// class Rabbit extends Animal{
+//     constructor(name, age, runSpeed){
+//         super(name, age);
+//         this.runSpeed = runSpeed;
+//     }
+// }
+// class Fish extends Animal{
+//     constructor(name, age, runSpeed){
+//         super(name, age);
+//         this.swimSpeed = swimSpeed;
+//     }
+// }
+// class Hawk extends Animal{
+//     constructor(name, age, runSpeed){
+//         super(name, age);
+//         this.flySpeed = flySpeed;
+//     }
+// }
+
+// const rabbit = new Rabbit();
+// const fish = new Fish();
+// const hawk = new Hawk();
+
+// rabbit.age();
+// fish.name();
+// hawk.flySpeed();
+
+// --------------------------------------------------------------------------------------------------
+
+// get/set
+
+// class Car{
+//     constructor(power){
+//         this._gas = 25;
+//         this._power = power;
+//     }
+//     get power(){
+//         return `${this.power}hp`
+//     }
+//     get gas(){
+//         return `${this.gas}L (${this._gas / 50 * 100}%)`;
+//     }
+//     set gas(value){
+//         if(value > 50){
+//             value = 50;
+//         }else if(value < 0){
+//             value = 0;
+//         }
+//         this._gas = value;
+//     }
+// }
+
+// let car = new Car(400);
+
+// car.gas = -100;
+
+// console.log(car.power);
+// console.log(car.gas);
+
+// ---------------------------------------------------------------------------------------------------
+
+// error / throw
+
+try{
+    let x = window.prompt("Enter a #");
+    x = Number(x);
+
+    if(isNaN(x)) throw "That wasn't a number";
+    if(x == "") throw "That was empty";
+
+    console.log(`${x} is a number`);
+}
+catch(error){
+    console.log(error);
+}
+finally{
+    console.log("This always executes.");
+}
