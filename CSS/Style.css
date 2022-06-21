@@ -3,3 +3,45 @@
     text-align: center;
     font-size: 50px;
 } 3*/
+
+/* #myDiv{
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+} 14*/
+
+/* #innerDiv{
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+} 
+
+#outerDiv{
+    background-color: lightgreen;
+    width: 200px;
+    height: 200px;
+}  15*/
+
+/* #myImg {
+    width: 350px;
+}  16*/
+
+/* #myDiv {
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    position: relative;
+}  17*/
+
+/* #myDiv {
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}  18*/
+
+/* #myCanvas {
+    border: 1px solid black;
+}  19*/
